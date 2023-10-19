@@ -7,20 +7,62 @@
     <title>영화 검색 사이트</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
+
+        * {
+            font-family: 'IBM Plex Sans KR', sans-serif;
+        }
+
         nav {
-            background-color: yellow;
+            /* background-color: yellow; */
             width: 1500px;
             height: 150px;
+            margin: 10px auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #search-bar {
+            margin: 10px auto;
         }
 
         main {
-            background-color: beige;
+            /* background-color: beige; */
             width: 1500px;
             height: 600px;
         }
 
+        #cards {
+            width: 1300px;
+            margin: 0px auto;
+        }
+
+        #card {
+            /* background-color: orange; */
+            width: 300px;
+            height: 500px;
+            margin: 10px;
+            padding: 1px;
+
+            float: left;
+        }
+
+        #poster_path {
+            width: 280px;
+            margin: 10px auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
         footer {
-            background-color: burlywood;
+            /* background-color: burlywood; */
             width: 1500px;
             height: 50px;
         }
@@ -45,14 +87,44 @@
     <nav>
         <div style="font-size: 50px;">인기 영화</div>
         <hr />
-        <div class="search-bar">
-            <p>영화 검색 : </p>
-            <input></input> <!-- 내부에 '영화 제목을 입력하세요.' 표시 -->
-            <button class="search-button">검색</button>
+        <div id="search-bar">
+            <span>영화 검색 : </span>
+            <input value="검색할 영화 제목을 입력하세요." style="width: 200px;"></input>
+            <button id="search-button">검색</button>
         </div>
     </nav>
     <main>
         <!-- 영화 카드 그리드 형식으로 가로 3개, 세로 n개 -->
+        <div id="cards">
+            <div id="card">
+                <img id="poster_path" src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg"
+                    alt="">
+                <div id="title">듄</div>
+                <div id="overview">듄의 내용 및 설명</div>
+                <div id="vote_average">평점</div>
+            </div>
+            <div id="card">
+                <img id="poster_path" src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg"
+                    alt="">
+                <div id="title">듄</div>
+                <div id="overview">듄의 내용 및 설명</div>
+                <div id="vote_average">평점</div>
+            </div>
+            <div id="card">
+                <img id="poster_path" src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg"
+                    alt="">
+                <div id="title">듄</div>
+                <div id="overview">듄의 내용 및 설명</div>
+                <div id="vote_average">평점</div>
+            </div>
+            <div id="card">
+                <img id="poster_path" src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg"
+                    alt="">
+                <div id="title">듄</div>
+                <div id="overview">듄의 내용 및 설명</div>
+                <div id="vote_average">평점</div>
+            </div>
+        </div>
     </main>
     <footer>
         <!-- 정보를 받아온 TMDB open API 적어두기 -->
