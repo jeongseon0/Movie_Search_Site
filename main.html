@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 검색 사이트</title>
+
+    <style>
+        nav {
+            background-color: yellow;
+            width: 1500px;
+            height: 150px;
+        }
+
+        main {
+            background-color: beige;
+            width: 1500px;
+            height: 600px;
+        }
+
+        footer {
+            background-color: burlywood;
+            width: 1500px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YjdhMjljMDFhOWQ5MDE3MDYyN2NmMGUxMzUzY2NjMSIsInN1YiI6IjY1MzBkOGE3YzQzOWMwMDBmZThiZmUzNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9kagSnSNwG7P2CqOrCJcXDYXNgiGcftJWPoHDeeAZFk'
+            }
+        };
+
+        fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div style="font-size: 50px;">인기 영화</div>
+        <hr />
+        <div class="search-bar">
+            <p>영화 검색 : </p>
+            <input></input> <!-- 내부에 '영화 제목을 입력하세요.' 표시 -->
+            <button class="search-button">검색</button>
+        </div>
+    </nav>
+    <main>
+        <!-- 영화 카드 그리드 형식으로 가로 3개, 세로 n개 -->
+    </main>
+    <footer>
+        <!-- 정보를 받아온 TMDB open API 적어두기 -->
+    </footer>
+</body>
+
+</html>
