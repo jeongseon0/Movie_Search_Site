@@ -38,6 +38,9 @@
         #card-list {
             margin: 20px auto;
             max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: center;
         }
 
         .movie-card {
@@ -45,14 +48,13 @@
             width: 200px;
             height: 400px;
             margin: 20px;
+            justify-self: center;
 
             line-height: 80%;
-
-            float: left;
         }
 
         img {
-            width: 200px;
+            width: 100%;
         }
 
         footer {
