@@ -4,121 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 검색 사이트</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
-
-        * {
-            font-family: 'IBM Plex Sans KR', sans-serif;
-        }
-
-        header {
-            /* background-color: yellow; */
-            height: 150px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #page-title {
-            font-size: 50px;
-        }
-
-        #search-bar {
-            margin: -10px auto 20px auto;
-        }
-
-        main {
-            /* background-color: beige; */
-            height: 850px;
-        }
-
-        #card-list {
-            margin: 20px auto;
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            justify-content: center;
-        }
-
-        .movie-card {
-            /* background-color: orange; */
-            width: 200px;
-            height: 400px;
-            margin: 20px;
-            justify-self: center;
-
-            line-height: 80%;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        footer {
-            /* background-color: burlywood; */
-            width: 1500px;
-            height: 50px;
-        }
-    </style>
-    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Movie App</title>
 </head>
 
 <body>
     <header>
-        <h1 id="page-title">인기 영화</h1>
-        <div id="search-bar">
-            <span>영화 검색 : </span>
-            <input placeholder="검색할 영화 제목을 입력하세요." style="width: 200px;"></input>
-            <button id="search-button">검색</button>
-        </div>
+        <form id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+        </form>
     </header>
-    <main>
-        <!-- 영화 카드 그리드 형식으로 가로 3개, 세로 n개 -->
-        <div id="card-list">
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+    <main id="main">
+        <div class="movie">
+            <img src="https://i.namu.wiki/i/CM9WgqYNFXtGFZCtBU1r2Exs1y-zKyjmIW55gBudgExj9Q6NIfUavAeq7Tn55FB-GxyJ8hWK9PShcQVBdxJPwQ.webp"
+                alt="Image">
+            <div class="movie-info">
+                <h3>Movie title</h3>
+                <span class="rate">9.8</span>
             </div>
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam, quam illum veritatis fuga
+                possimus quis autem molestiae ad quasi laboriosam nesciunt enim dolorem quidem vitae asperiores? Aut,
+                doloremque commodi?
             </div>
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+        </div>
+        <div class="movie">
+            <img src="https://i.namu.wiki/i/CM9WgqYNFXtGFZCtBU1r2Exs1y-zKyjmIW55gBudgExj9Q6NIfUavAeq7Tn55FB-GxyJ8hWK9PShcQVBdxJPwQ.webp"
+                alt="Image">
+            <div class="movie-info">
+                <h3>Movie title</h3>
+                <span class="rate">9.8</span>
             </div>
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam, quam illum veritatis fuga
+                possimus quis autem molestiae ad quasi laboriosam nesciunt enim dolorem quidem vitae asperiores? Aut,
+                doloremque commodi?
             </div>
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+        </div>
+        <div class="movie">
+            <img src="https://i.namu.wiki/i/CM9WgqYNFXtGFZCtBU1r2Exs1y-zKyjmIW55gBudgExj9Q6NIfUavAeq7Tn55FB-GxyJ8hWK9PShcQVBdxJPwQ.webp"
+                alt="Image">
+            <div class="movie-info">
+                <h3>Movie title</h3>
+                <span class="rate">9.8</span>
             </div>
-            <div class="movie-card">
-                <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2021/1014/IE002881146_STD.jpg">
-                <h3>제목</h3>
-                <p>내용 및 설명</p>
-                <p>평점</p>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam, quam illum veritatis fuga
+                possimus quis autem molestiae ad quasi laboriosam nesciunt enim dolorem quidem vitae asperiores? Aut,
+                doloremque commodi?
+            </div>
+        </div>
+        <div class="movie">
+            <img src="https://i.namu.wiki/i/CM9WgqYNFXtGFZCtBU1r2Exs1y-zKyjmIW55gBudgExj9Q6NIfUavAeq7Tn55FB-GxyJ8hWK9PShcQVBdxJPwQ.webp"
+                alt="Image">
+            <div class="movie-info">
+                <h3>Movie title</h3>
+                <span class="rate">9.8</span>
+            </div>
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam, quam illum veritatis fuga
+                possimus quis autem molestiae ad quasi laboriosam nesciunt enim dolorem quidem vitae asperiores? Aut,
+                doloremque commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam, quam illum
+                veritatis fuga possimus quis autem molestiae ad quasi laboriosam nesciunt enim dolorem quidem vitae
+                asperiores? Aut, doloremque commodi?
             </div>
         </div>
     </main>
-    <footer>
-        <!-- 정보를 받아온 TMDB open API 적어두기 -->
-    </footer>
 </body>
-
+<script src="script.js"></script>
 </html>
