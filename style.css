@@ -6,8 +6,12 @@
 }
 
 :root {
-    --primary-color: #22254b;
-    --secondary-color: #373b69;
+    --primary-color: #424A34;
+    --secondary-color: #707E58;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -17,18 +21,27 @@ body {
 
 header {
     padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
     background-color: var(--secondary-color);
+    height: 5rem;
+}
+
+header h1 {
+    color: white;
+    float: left;
+    margin: 0px auto auto 10px;
 }
 
 .search {
     background-color: transparent;
+    margin: 0px 10px auto auto;
     border: 2px solid var(--primary-color);
     padding: 0.5rem 1rem;
-    border: 50px;
+    border-radius: 50px;
     font-size: 1rem;
     color: white;
+    float: right;
 }
 
 .search:focus {
@@ -37,13 +50,15 @@ header {
 }
 
 .search::placeholder {
-    color: #7378c5;
+    color: white;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .movie {
@@ -99,7 +114,6 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
-    /* box-shadow: 0.2px 4px 5px rgba(1, 1, 1, 0.1); */
 }
 
 .movie:hover img {
