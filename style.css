@@ -62,13 +62,15 @@ main {
 }
 
 .movie {
-    width: 300px;
+    width: 250px;
+    height: 460px;
     margin: 1rem;
     border-radius: 3px;
     box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .movie img {
@@ -85,7 +87,8 @@ main {
 }
 
 .movie-info h3 {
-    margin-top: 0;
+    padding-right: 1rem;
+    margin: 0;
 }
 
 .movie-info span {
@@ -109,7 +112,8 @@ main {
     padding: 1rem;
     max-height: 100%;
     transform: translateY(101%);
-    transition: transform 0.3s ease-in;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .movie:hover .overview {
