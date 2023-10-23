@@ -23,6 +23,7 @@ const search_url = base_url + 'search/movie?api_key=' + api_key + '&language=ko-
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
+const home = document.getElementById('home');
 
 getMovies(api_url);
 
@@ -48,7 +49,7 @@ function showMovies(data) {
         let _vote_average = movie['vote_average'];
         let _overview = movie['overview'];
         let _id = movie['id'];
-        // 시간 되면 개봉일도 넣어보기
+        // 시간 되면 개봉일도 넣어보기 -> 안나,,,,,,,,,
 
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
@@ -67,21 +68,27 @@ function showMovies(data) {
 
         main.appendChild(movieEl);
     });
+
+    main.addEventListener('click', async () => {
+        alert(`movie id: ${id}`);
+    })
 }
-// main.addEventListener('click', async () => {
-//     alert(`movie id: ${id}`);
-// })
 
-
-
+// 엔터키를 누르면 검색
 form.addEventListener('submit', (e) => {
+    // form에서 엔터 치면 나는 오류 방지
     e.preventDefault();
 
-    const searchTerm = search.value;
+    const searchValue = search.value;
 
-    if (searchTerm) {
-        getMovies(search_url + '&query=' + searchTerm);
+    if (searchValue) {
+        getMovies(search_url + '&query=' + searchValue);
     } else {
         getMovies(api_url);
     }
 });
+
+// Movie Chart를 누르면 새로고침
+home.addEventListener('click', () => {
+    location.reload();
+})
