@@ -69,8 +69,12 @@ function showMovies(data) {
         main.appendChild(movieEl);
     });
 
-    main.addEventListener('click', async () => {
-        alert(`movie id: ${id}`);
+    document.querySelectorAll('.movie').forEach((dom) => {
+        dom.addEventListener("click", async (event) => {
+            const id = event.currentTarget.getAttribute('id');
+
+            alert(`movie id: ${id}`);
+        })
     })
 }
 
