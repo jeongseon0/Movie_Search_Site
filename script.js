@@ -96,3 +96,6 @@ form.addEventListener('submit', (e) => {
 home.addEventListener('click', () => {
     location.reload();
 })
+
+// 새로고침 하면 검색란에 커서 고정
+document.querySelector('.search').focus();
